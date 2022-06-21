@@ -2,7 +2,16 @@ import * as React from "react"
 import TweetInput from "./TweetInput"
 import "./TweetBox.css"
 
-export default function TweetBox(props) {
+export default function TweetBox({userProfile, setTweets, tweets}) {
+  function handleOnSubmit(){
+    var newTweet;
+    newTweet.name = userProfile.name
+    newTweet.handle = userProfile.handle
+    newTweet.text = ""
+    newTweet.comments = 0
+    newTweet.retweets = 0
+    newTweet.likes = 0
+  }
   return (
     <div className="tweet-box">
       <TweetInput />
